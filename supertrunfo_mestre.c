@@ -67,7 +67,7 @@ int main()
   densidade_demografica_1 = populacao_1 / area_1;
   pib_per_capita_1 = (pib_1 * 1000000000) / populacao_1;
   // Exemplo de cálculo para o super poder
-  super_poder_1 = (populacao_1 + area_1 + pib_1 + (float)num_pontos_turisticos_1 + pib_per_capita_1 + (1/densidade_demografica_1)); 
+  super_poder_1 = (populacao_1 + area_1 + pib_1 + (float)num_pontos_turisticos_1 + pib_per_capita_1 + (1 / densidade_demografica_1));
 
   printf("\n...Cadastro da primeira carta concluído!...\n\n");
 
@@ -135,8 +135,17 @@ int main()
   printf("PIB per Capita: %.2f reais\n", pib_per_capita_2);
   printf("Super Poder: %.2f\n\n\n", super_poder_2);
 
+  // Compara os atributos das cartas
+  printf("População: Carta 1 venceu? (%d)\n", populacao_1 > populacao_2);
+  printf("Área: Carta 1 venceu? (%d)\n", area_1 > area_2);
+  printf("PIB: Carta 1 venceu? (%d)\n", pib_1 > pib_2);
+  printf("Número de Pontos Turísticos: Carta 1 venceu? (%d)\n", num_pontos_turisticos_1 > num_pontos_turisticos_2);
+  printf("Densidade Demográfica: Carta 1 venceu? (%d)\n", (1/densidade_demografica_1) > (1/densidade_demografica_2));
+  printf("PIB per Capita: Carta 1 venceu? (%dA)\n", pib_per_capita_1 > pib_per_capita_2);
+  printf("Super Poder: Carta 1 venceu? (%d)\n\n", super_poder_1 > super_poder_2);
+
   // Mostra mensagem de finalização
-  printf("Tudo certo! Os cadastros foram finalizados!\n");
+  printf("Finalizado!\n");
 
   return 0;
 }
